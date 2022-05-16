@@ -1,0 +1,92 @@
+{"properties": [
+  {
+    "name": "zull.routes.guest-service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.guest-service.url'"
+  },
+  {
+    "name": "zull.routes.inventory-service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.inventory-service.url'"
+  },
+  {
+    "name": "zull.routes.room-service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.room-service.url'"
+  },
+  {
+    "name": "eureka.client.register-with-eureka",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.client.register-with-eureka'"
+  },
+  {
+    "name": "eureka.client.fetch-registry",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.client.fetch-registry'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  },
+  {
+    "name": "zull.routes.GuestMicroService.url",
+    "type": "java.lang.String",
+    "description": "A description for 'zull.routes.GuestMicroService.url'"
+  }
+]}

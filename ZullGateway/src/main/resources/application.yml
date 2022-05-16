@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: "Hotel Management System Zull Gateway"
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+server:
+ port: 8100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+zuul:
+  routes:
+    department-service:
+      url: http://localhost:8085
+    employee-service:
+      url: http://localhost:8084
+    guest-service:
+      url: http://localhost:8081
+    inventory-service:
+      url: http://localhost:8086
+    room-service:
+      url: http://localhost:8082
+    booking-service:
+      url: http://localhost:8083
