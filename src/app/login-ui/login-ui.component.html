@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="background-image">
+
+        <h1>Hotel Management System</h1>
+
+    <div class="login">
+        <div class="inner">
+            <div class="col-md-6">
+                <form action="#">
+                    <div style="text-align: center;">
+                        <h2>Login Page</h2>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="username" [(ngModel)]="login.username" id="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" [(ngModel)]="login.password" id="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <input type="button" value="Login" (click)="jumpTo()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>

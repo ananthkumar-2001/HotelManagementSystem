@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="owners-ui\src\app\employee-ui\employee-ui.component.js"></script>
+</head>
+
+<body>
+
+    
+
+        <h1>Hotel Management System</h1>
+
+        <div class="topnav" id="myTopnav">
+            <a href="http://localhost:4200/home">Home</a>
+            <a href="http://localhost:4200/booking">Booking</a>
+            <a href="http://localhost:4200/room">Room</a>
+            <a href="http://localhost:4200/guest">Guest</a>
+            <a href="http://localhost:4200/employee">Employee</a>
+            <a href="http://localhost:4200/department">Department</a>
+            <a href="http://localhost:4200/inventory">Inventory</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        
+
+        <!-- <div class="container">
+            <div class="row">
+              <div id="custom-search-input">
+                <div class="input-group col-md-12" style="text-align: center">
+                  <input type="text" class="search-query form-control" placeholder="Search With employee id" name="employeeId"
+                    [(ngModel)]="employeeId" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button" (click)="getemployeeById()">
+                      <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+        <div class="container list">
+            <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                    <thead>
+                        <tr>
+                            <th>Employee Id</th>
+                            <th>Employee Name</th>
+                            <th>Employee PhoneNo</th>
+                            <th>Employe EmailId</th>
+                            <th>Employee Address</th>
+                            <th>Employe Department</th>
+                            <th>Employee Salary</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of employees">
+                            <td>{{employee.employeeId}}</td>
+                            <td>{{employee.employeeName}}</td>
+                            <td>{{employee.employeePhoneNo}}</td>
+                            <td>{{employee.employeeEmailId}}</td>
+                            <td>{{employee.employeeAddress}}</td>
+                            <td>{{employee.employeeDepartment}}</td>
+                            <td>{{employee.employeeSalary}}</td>
+                            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteEmployee(employee.employeeId)"><span
+                                        class="glyphicon glyphicon-remove"></span>Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<!-- 
+        <div class="add">
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <fieldset>
+
+                            <div class="form-group">
+                                <label for="employeeName"><span class="req">* </span> employee Name: </label>
+                                <input class="form-control" [(ngModel)]="employee.employeeName" type="text"
+                                    name="employeeName" id="employeeName" required
+                                    placeholder="Enter the name of the employee" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="employeePhoneNo"><span class="req">* </span> employee phoneNo : </label>
+                                <input class="form-control" [(ngModel)]="employee.employeePhoneNo" type="text"
+                                    name="employeePhoneNo" id="employeePhoneNo"
+                                    placeholder="Enter the phone no of the employee" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="employeeEmailId"><span class="req">* </span> employee emailId : </label>
+                                <input class="form-control" [(ngModel)]="employee.employeeEmailId" required type="text"
+                                    name="employeeEmailId" id="employeeEmailId" placeholder="Enter employee emailId " />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="employeeAddress"><span class="req">* </span> employee address : </label>
+                                <input class="form-control" [(ngModel)]="employee.employeeAddress" type="text"
+                                    name="employeeAddress" id="employeeAddress" placeholder="Enter the employee address"
+                                    required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="employeeDepartment"><span class="req">* </span> employee department :
+                                </label>
+                                <input class="form-control" [(ngModel)]="employee.employeeDepartment" type="text"
+                                    name="employeeDepartment" id="employeeDepartment"
+                                    placeholder="Enter the employee department" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="employeeSalary"><span class="req">* </span> employee salary : </label>
+                                <input class="form-control" [(ngModel)]="employee.employeeSalary" type="text"
+                                    name="employeeSalary" id="employeeSalary" placeholder="Enter the employee Salary"
+                                    required />
+                            </div>
+
+                            <div class="form-group">
+                                <input class="btn btn-success" type="submit" name="submit_reg" value="SUBMIT"
+                                    (click)="addEmployee()">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            document.querySelector("#show-login").addEventListener("click", function () {
+                document.querySelector(".popup-add").classList.add("active");
+            })
+            document.querySelector(".popup .close-btn").addEventListener("click", function () {
+                document.querySelector(".popup-add").classList.add("active");
+            })
+        </script>
+
+
+
+</body>
+
+</html>

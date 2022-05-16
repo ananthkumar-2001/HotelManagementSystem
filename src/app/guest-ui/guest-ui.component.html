@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+  
+
+    <h1>Hotel Management System</h1>
+
+    <div class="topnav" id="myTopnav">
+      <a href="http://localhost:4200/home">Home</a>
+      <a href="http://localhost:4200/booking">Booking</a>
+      <a href="http://localhost:4200/room">Room</a>
+      <a href="http://localhost:4200/guest">Guest</a>
+      <a href="http://localhost:4200/employee">Employee</a>
+      <a href="http://localhost:4200/department">Department</a>
+      <a href="http://localhost:4200/inventory">Inventory</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div id="custom-search-input">
+          <div class="input-group col-md-12" style="text-align: center">
+            <input type="text" class="search-query form-control" placeholder="Search With guest id" name="guestId"
+              [(ngModel)]="guestId" />
+            <span class="input-group-btn">
+              <button class="btn btn-danger" type="button" (click)="getGuestById()">
+                <span class=" glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container list">
+      <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+          <thead>
+            <tr>
+              <th>guestId</th>
+              <th>guestName</th>
+              <th>guestAge</th>
+              <th>guestContactNo</th>
+              <th>guestEmailId</th>
+              <th>guestAddress</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let guest of guests">
+              <td>{{guest.guestId}}</td>
+              <td>{{guest.guestName}}</td>
+              <td>{{guest.guestAge}}</td>
+              <td>{{guest.guestContactNo}}</td>
+              <td>{{guest.guestEmailId}}</td>
+              <td>{{guest.guestAddress}}</td>
+              <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteGuest(guest.guestId)" ><span
+                    class="glyphicon glyphicon-remove"></span> Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 
+    <div class="add">
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="guestName"><span class="req">* </span> Guest Name : </label>
+                <input class="form-control" [(ngModel)]="guest.guestName" type="text" name="guestName" id="guestName"
+                  required placeholder="Enter the Name of the guest" />
+              </div>
+
+              <div class="form-group">
+                <label for="guestAge"><span class="req">* </span> Guest Age : </label>
+                <input class="form-control" [(ngModel)]="guest.guestAge" type="number" name="guestAge" id="guestAge"
+                  placeholder="Enter the age of the guest" required />
+              </div>
+
+              <div class="form-group">
+                <label for="guestContactNo"><span class="req">* </span> Guest Contact No : </label>
+                <input class="form-control" [(ngModel)]="guest.guestContactNo" required type="text"
+                  name="guestContactNo" id="guestContactNo" placeholder="Enter the contact of guest" />
+              </div>
+
+              <div class="form-group">
+                <label for="guestEmailId"><span class="req">* </span> Guest Email Id : </label>
+                <input class="form-control" [(ngModel)]="guest.guestEmailId" type="email" name="guestEmailId"
+                  id="guestEmailId" placeholder="Enter the guest email id...." required />
+              </div>
+
+              <div class="form-group">
+                <label for="guestAddress"><span class="req">* </span> Guest Address : </label>
+                <input class="form-control" [(ngModel)]="guest.guestAddress" required type="text" name="guestAddress"
+                  id="guestAddress" placeholder="Enter the address of guest" />
+              </div>
+
+              <div class="form-group">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="SUBMIT" (click)="addGuest()">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+ -->
+
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+  
+
+</body>
+
+</html>

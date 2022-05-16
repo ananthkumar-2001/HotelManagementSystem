@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+   
+
+        <h1>Hotel Management System</h1>
+
+        <div class="topnav" id="myTopnav">
+            <a href="http://localhost:4200/manager">Manager's Home</a>
+            <a href="http://localhost:4200/manager-room">Room</a>
+            <a href="http://localhost:4200/manager-employee">Employee</a>
+            <a href="http://localhost:4200/manager-inventory">Inventory</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+
+
+
+
+
+        <!-- <div class="container">
+            <div class="row">
+              <div id="custom-search-input">
+                <div class="input-group col-md-12" style="text-align: center">
+                  <input type="text" class="search-query form-control" placeholder="Search With inventory id" name="inventoryId"
+                    [(ngModel)]="inventoryId" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button" (click)="getinventoryById()">
+                      <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+        <div class="container list">
+            <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                    <thead>
+                        <tr>
+                            <th>Inventory Id</th>
+                            <th>Inventory Name</th>
+                            <th>Inventory Department</th>
+                            <th>Imploye Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let inventory of inventorys">
+                            <td>{{inventory.inventoryId}}</td>
+                            <td>{{inventory.inventoryName}}</td>
+                            <td>{{inventory.inventoryDepartment}}</td>
+                            <td>{{inventory.inventoryQuantity}}</td>
+                            <td class="text-center"><button class="btn btn-danger btn-xs"
+                                    (click)="deleteInventory(inventory.inventoryId)"><span
+                                        class="glyphicon glyphicon-remove"></span>Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="add">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <fieldset>
+
+                        <div class="form-group">
+                            <label for="inventoryName"><span class="req">* </span> Inventory Name: </label>
+                            <input class="form-control" [(ngModel)]="inventory.inventoryName" type="text"
+                                name="inventoryName" id="inventoryName" required
+                                placeholder="Enter the name of the inventory" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inventoryDepartment"><span class="req">* </span> Inventory Department : </label>
+                            <input class="form-control" [(ngModel)]="inventory.inventoryDepartment" type="text"
+                                name="inventoryDepartment" id="inventoryDepartment"
+                                placeholder="Enter the department of inventory" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inventoryQuantity"><span class="req">* </span> Inventory Quantity : </label>
+                            <input class="form-control" [(ngModel)]="inventory.inventoryQuantity" required type="text"
+                                name="inventoryQuantity" id="inventoryQuantity"
+                                placeholder="Enter inventory quantity " />
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <input class="btn btn-success" type="submit" name="submit_reg" value="SUBMIT"
+                                (click)="addInventory()">
+                        </div>
+                    </fieldset>
+                </form><!-- ends register form -->
+                <!-- second for to fiter user-->
+                <!-- ends col-6 -->
+            </div>
+        </div>
+        </div>
+
+        
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+   
+
+</body>
+
+</html>

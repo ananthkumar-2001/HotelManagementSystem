@@ -1,0 +1,38 @@
+.login{
+    margin-left: 39%;
+    margin-top: 5%;
+    width: 330px;
+    height: 200px;
+    border: 1px rgb(7, 7, 7);
+}
+.form-control {
+    width: 200%;
+    padding: 0;
+    margin: 0;
+  }
+
+.inner{
+   padding: 7px;
+    margin: 1px;
+    margin-left: 4%;
+}
+.background-image{
+    background-image: url("src\app\bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  h2{
+      color:darkblue
+  }
+
+  h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #EEA47FFF;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    function formValidate(){
+        var rent=document.getElementById("roomRent").value;
+        if(rent<1000){
+          alert("Rent can not be less than 1000");
+          return false;
+        }
+        else if(rent>20000){
+          alert("Rent can not be less than 20000");
+          return false;
+        }
+      }
+  </script>
+</head>
+
+<body>
+
+  
+
+    <h1>Hotel Management System</h1>
+
+    <div class="topnav" id="myTopnav">
+      <a href="http://localhost:4200/home">Home</a>
+      <a href="http://localhost:4200/booking">Booking</a>
+      <a href="http://localhost:4200/room">Room</a>
+      <a href="http://localhost:4200/guest">Guest</a>
+      <a href="http://localhost:4200/employee">Employee</a>
+      <a href="http://localhost:4200/department">Department</a>
+      <a href="http://localhost:4200/inventory">Inventory</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+
+    <!-- <div class="container">
+      <div class="row">
+        <div id="custom-search-input">
+          <div class="input-group col-md-12" style="text-align: center">
+            <input type="text" class="search-query form-control" placeholder="Search With room id" name="roomId"
+              [(ngModel)]="roomId" />
+            <span class="input-group-btn">
+              <button class="btn btn-danger" type="button" (click)="getRoomById()">
+                <span class=" glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="list">
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+          <thead>
+            <tr>
+              <th>roomId</th>
+              <th>roomType</th>
+              <th>noOfBeds</th>
+              <th>roomStatus</th>
+              <th>roomRent</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let room of rooms">
+              <td>{{room.roomId}}</td>
+              <td>{{room.roomType}}</td>
+              <td>{{room.noOfBeds}}</td>
+              <td>{{room.roomStatus}}</td>
+              <td>{{room.roomRent}}</td>
+              <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteRoom(room.roomId)" ><span
+                class="glyphicon glyphicon-remove"></span>Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<!-- 
+    <div class="add">
+      <div class="row">
+        <div class="col-md-6">
+          <form onsubmit="return formValidate()">
+            <fieldset>
+
+              <div class="form-group">
+                <label for="roomType"><span class="req">* </span> Room Type : </label>
+                <input class="form-control" [(ngModel)]="room.roomType" type="text" name="roomType" id="roomType" pattern="[A-Za-z ]{10}"
+                  required placeholder="Enter the type of the room" />
+              </div>
+
+              <div class="form-group">
+                <label for="noOfBeds"><span class="req">* </span> No of Beds : </label>
+                <input class="form-control" [(ngModel)]="room.noOfBeds" type="text" name="noOfBeds" id="noOfBeds"
+                  placeholder="Enter the no of beds available in the room" required pattern="[1-5]{1}"/>
+              </div>
+
+              <div class="form-group">
+                <label for="roomStatus"><span class="req">* </span> Room Status : </label>
+                <select name="roomStatus" id="roomStatus" class="form-control" [(ngModel)]="room.roomStatus" required>
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="roomRent"><span class="req">* </span> Room Rent : </label>
+                <input class="form-control" [(ngModel)]="room.roomRent" type="text" name="roomRent" id="roomRent" pattern="[0-9]"
+                  placeholder="Enter the room rent" required />
+              </div>
+
+              <div class="form-group">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="SUBMIT"  (click)="addNow()">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+ -->
+
+
+    <script>
+      
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+  
+
+</body>
+
+</html>
